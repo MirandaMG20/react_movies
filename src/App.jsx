@@ -21,12 +21,15 @@ function App() {
     }
   };
 
+  useEffect(() => {
+    getMovie("oppenheimer")
+  }, []);
 
   return (
     <>
      {/* Passing the function to Form as a prop and calling it movieSearch */}
       <Form movieSearch={getMovie} /> 
-      <MovieDisplay />
+      <MovieDisplay movie={movie} />
     </>
   );
 }
