@@ -1,7 +1,29 @@
 import React from "react";
 import { useState } from "react";
+import styled from "styled-components";
 
-function Form({movieSearch}) {
+
+const Header = styled.div`
+  font-size: 3em;
+  color: #535bf2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`
+
+const Input = styled.input`
+border: none;
+border-radius: 50px;
+`
+
+const Button = styled.input`
+border: none;
+border-radius: 50px;
+box-shadow: 0 0 5px #646cff;
+cursor: pointer;
+`
+
+function Form({ movieSearch }) {
   const [form, setForm] = useState({ // state to hold the data of the form
     searchTerm: "" // initial value of the search term
   })
@@ -20,12 +42,13 @@ function Form({movieSearch}) {
   }
 
   return (
-    <div>
+    <Header>
+      <h1>Movies</h1>
       <form onSubmit={handleSubmit}>
-        <input type="text" value={form.searchTerm} onChange={handleChange} />
-        <input type="submit" value="submit" />
+        <Input type="text" placeholder="Search Movies" value={form.searchTerm} onChange={handleChange} />
+        <Button type="submit" value="Submit" />
       </form>
-    </div>
+    </Header>
   )
 }
 
