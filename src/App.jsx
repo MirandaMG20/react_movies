@@ -7,11 +7,18 @@ import './index.css'
 
 
 const Container = styled.div`
-  width: 80%;
+  width: 90%;
   margin: auto;
-  text-align: center;
+  // text-align: center;
   // background-color: #242424
-`;
+`
+const Footer = styled.div`
+  font-size: 15px;
+  text-align: center;
+  background-color: #646cff;
+  margin: 0;
+  // padding-top: 10px;
+`
 
 function App() {
   const apiKey = "529bf2e4"; // variable with your apiKey
@@ -27,7 +34,7 @@ function App() {
         `https://www.omdbapi.com/?apikey=${apiKey}&t=${searchTerm}`
       );
       const data = await response.json(); // getting my movie
-      console.log(data)
+      // console.log(data)
       setMovie(data); // this variable is holding the movie data
       // catch if it fails
     } catch (error) {
@@ -46,6 +53,10 @@ function App() {
         <Form movieSearch={getMovie} />
         <MovieDisplay movie={movie} />
       </Container>
+
+      <Footer>
+        <p>&copy; 2023 Movies. All rights reserved.</p>
+      </Footer>
     </>
   );
 }

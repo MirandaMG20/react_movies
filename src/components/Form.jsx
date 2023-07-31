@@ -4,18 +4,19 @@ import styled from "styled-components";
 
 
 const Header = styled.div`
-  font-size: 3em;
-  color: #535bf2;
+  // color: #535bf2;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 `
-
+const H1 = styled.h1`
+font-size: 125px;
+text-shadow: 5px 5px 10px #646cff;
+`
 const Input = styled.input`
 border: none;
-border-radius: 50px;
+border-radius: 40px;
 `
-
 const Button = styled.input`
 border: none;
 border-radius: 50px;
@@ -39,13 +40,14 @@ function Form({ movieSearch }) {
   const handleSubmit = (e) => {
     e.preventDefault(); // prevents the default behavior of refreshing the page
     movieSearch(form.searchTerm);  //. notation to reach the object searchTerm in the function
+    form.searchTerm= "";
   }
 
   return (
     <Header>
-      <h1>Movies</h1>
+      <H1>Movies</H1>
       <form onSubmit={handleSubmit}>
-        <Input type="text" placeholder="Search Movies" value={form.searchTerm} onChange={handleChange} />
+        <Input type="text" placeholder="Search" value={form.searchTerm} onChange={handleChange} />
         <Button type="submit" value="Submit" />
       </form>
     </Header>
