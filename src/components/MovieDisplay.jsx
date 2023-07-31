@@ -35,10 +35,8 @@ function MovieDisplay({ movie }) {
         <img src={movie.Poster || "N/A"} alt={movie.Title} />
 
         <div>
+          <Title>{movie.Title || "N/A"}</Title>
 
-          s>
-
-        </di<Title>{movie.Title || "N/A"}</Title>
 
           <Info>
             <h5>Genre: {movie.Genre || "N/A"}</h5>
@@ -56,8 +54,8 @@ function MovieDisplay({ movie }) {
           <Ratings>
             <h5>Rotten Tomatoes: {movie.Ratings[1].Value || "N/A"}</h5>
             <h5>IMDb: {movie.Ratings[0].Value || "N/A"}</h5>
-          </Ratingv>
-
+          </Ratings>
+        </div>
       </Details>
     );
   };
