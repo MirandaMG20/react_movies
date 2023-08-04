@@ -21,7 +21,7 @@ const Footer = styled.div`
 `
 
 function App() {
-  const apiKey = "529bf2e4"; // variable with your apiKey
+  const apiKey = VITE_API_KEY; // variable with your apiKey
   const [movie, setMovie] = useState(null); // state to hold movie data
 
   // Function to getMovies

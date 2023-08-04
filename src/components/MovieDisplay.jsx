@@ -56,6 +56,7 @@ function MovieDisplay({ movie }) {
             <h5>IMDb: {movie.Ratings[0].Value || "N/A"}</h5>
           </Ratings>
         </div>
+        
       </Details>
     );
   };
