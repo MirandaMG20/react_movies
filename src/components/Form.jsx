@@ -10,14 +10,16 @@ const Header = styled.div`
   justify-content: space-evenly;
 `
 const H1 = styled.h1`
-font-size: 125px;
+font-size: 140px;
 text-shadow: 5px 5px 10px #646cff;
 `
 const Input = styled.input`
+padding: 5px;
 border: none;
 border-radius: 40px;
 `
 const Button = styled.input`
+padding: 5px;
 border: none;
 border-radius: 50px;
 box-shadow: 0 0 5px #646cff;
