@@ -21,7 +21,8 @@ const Footer = styled.div`
 `
 
 function App() {
-  const apiKey = VITE_API_KEY; // variable with your apiKey
+
+  const apiKey = import.meta.env.VITE_API_KEY; // variable with your apiKey
   const [movie, setMovie] = useState(null); // state to hold movie data
 
   // Function to getMovies
@@ -43,7 +44,7 @@ function App() {
   };
 
   useEffect(() => {
-    getMovie("Minions");
+    getMovie("Clueless");
   }, []);
 
   return (
